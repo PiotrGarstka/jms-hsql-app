@@ -4,6 +4,7 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 //import org.hsqldb.util.DatabaseManagerSwing;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,6 +13,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 @ComponentScan({ "com.example" })
 @Configuration
+@EnableBatchProcessing
 public class SpringRootConfig {
 
     @Autowired
@@ -29,4 +31,6 @@ public class SpringRootConfig {
 //        DatabaseManagerSwing.main(new String[] { "--url", "jdbc:hsqldb:mem:testdb", "--user", "sa", "--password", "" });
 
     }
+
+
 }

@@ -11,6 +11,11 @@ public class Person {
     Date joinedDate;
     String lastName;
 
+    public Person(String first_name, BigInteger id) {
+        this.firstName=first_name;
+        this.id=id;
+    }
+
     public BigInteger getId() {
         return id;
     }
